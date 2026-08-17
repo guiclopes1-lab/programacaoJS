@@ -26,3 +26,4 @@ let adicional_noturno = 200
 salario = salario + adicional_noturno
 console.log("Salário com adicional noturno " +salario)
 
+
