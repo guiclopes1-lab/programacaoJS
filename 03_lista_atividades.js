@@ -60,7 +60,7 @@ Substitua X pelo valor da idade atual e Y pela idade que a pessoa terá daqui a 
 
 */
 let idade = 19
-let daqui_10 = 29
+let daqui_10 = idade + 10
 console.log("Olá, sua idade é de " +idade+  " e daqui a 10 anos terá " +daqui_10+ " anos ")
 
 
@@ -197,7 +197,10 @@ Exemplo:
 */
 let hora = 10
 let minutos = horas * 60
-let segundos = 
+let segundos = minutos * 60
+
+
+
 
 /*
 ### ----- Atividade 11:
@@ -210,6 +213,12 @@ e que o valor original da segunda variável seja armazenado na primeira variáve
 Ao final, mostre o valor das duas variáveis na tela.
 
 */
+
+let volor1 = "Groselha"
+let valor2 = 99
+
+console.log(" A variável 1 é : " +valor1+ " e a variável 2 é " +valor2)
+
 
 /*
 ### ----- Atividade 12:
