@@ -15,7 +15,14 @@ console.log("Acesso concedido! ")
  console.log("Idade inválida , tente novamente")
  }
 
- console.log(" A idade digitada foi ")+idade
+if( idade <= 0  ){
+
+console.log("Idade inválida , tente novamente")
+}
+
+
+
+ console.log(" A idade digitada foi: " +idade)
 
 
 
