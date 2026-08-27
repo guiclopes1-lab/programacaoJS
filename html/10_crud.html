@@ -16,8 +16,9 @@
         
         <hr/>
 
-        <input id="inputnome" placeholder="Digite um nome"/>
-        <button onclick="inserir()" >Salvar</button>
+        <input  id="inputnome" placeholder="Digite um nome"/>
+        <button id="botaosalvar" onclick="inserir()" >Salvar</button>
+        <button id="botaoalterar" style="display: none;" onclick="salvaralteracao()">Salvar alterações</button>
         
         <ul id="listausuarios">
             
@@ -29,19 +30,72 @@
 
             let nomes = ["Conrado", "Caio","Felipe", "Rafael"] //Array
           
+            let posicaoalteracao = 0
 
-            Buscartodos()
+            buscartodos()
+
+            function remover(nome){
+                  
+                  let resposta = confirm("Tem certeza que dejesa remover?")
+                  if(resposta == false){
+                    return
+                  }
+
+                  let posicaoremocao = nomes.indexOf(nome)
+                  nomes.splice(posicaoalteracao, 1)
+                  buscartodos()
+            }
+
+            function salvaralteracao(){
+                  let nome = document.getElementById("inputnome").value
+                buscartodos()
+                document.getElementById("inputnome").value = ""
+                if(nome.trim().length < 3){
+                    alert("Digite um nome válido...")
+                    return
+
+                } else{
+                    nomes[posicaoalteracao] = nome
+                    buscartodos()
+                    document.getElementById("inputnome").value = ""
+                }
+
+            }
+
+            function atualizar(nome){
+
+                posicaoalteracao = nomes.indexOf(nome)
+
+                document.getElementById("inputnome").value = nome
+
+                document.getElementById("botaosalvar").style.display = "none"
+                document.getElementById("botaoalterar").style.display = "inline-block"
+
+
+
+
+            }
 
             function inserir(){
                 let nome = document.getElementById("inputnome").value
-                nomes = nomes.concat(nome)
-                Buscartodos()
+                
+                buscartodos()
                 document.getElementById("inputnome").value = ""
+                if(nome.trim().length < 3){
+                    alert("Digite um nome válido...")
+                    return
+
+                } else{
+                    nomes = nomes.concat(nome)
+                    buscartodos()
+                    document.getElementById("inputnome").value = ""
+                }
+
             }
 
-            function Buscartodos(){
+            function buscartodos(){
                 let html = ""
-                nomes.map( i => html += "<li> "+i+" <button>🖊<button>🗑</button></li>" )
+                nomes.map( i => html += `<li> ${i} <button onclick='atualizar("${i}")'>🖊<button onclick= 'remover("${i}")'>🗑</button></li>` )
                 document.getElementById("listausuarios").innerHTML = html
                 
             }
