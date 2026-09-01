@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #ff6b81;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.saldo {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.area-sorvete {
+    margin: 20px 0;
+}
+
+.img-sorvete {
+    width: 100px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.1s ease;
+}
+
+.img-sorvete:active {
+    transform: scale(0.9);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 20px 0;
+}
+
+.lista-upgrades {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.lista-upgrades li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+}
+
+button {
+    background-color: #2ed573;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #26af5f;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.card-recompensa {
+    background-color: #eccc68;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.card-recompensa p {
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.btn-navegacao {
+    background-color: #70a1ff;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.btn-navegacao:hover {
+    background-color: #1e90ff;
+}
